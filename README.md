@@ -21,6 +21,11 @@
 
 - Github: [@carlosprietobarron](https://github.com/carlosprietobarron)
 
+
+👤 Paul
+
+- Github: [@misterpaul4](https://github.com/misterpaul4)
+- Linkedin: [Chukwuebuka Paul Ajuizeogu](https://www.linkedin.com/in/chukwuebuka-paul-ajuizeogu/)
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!
