@@ -1,13 +1,18 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import Book from './Book';
+'
 
 const BookList = () => (
   <table>
-    <tr>
-      <td>Book ID</td>
-      <td>Title</td>
-      <td>Category</td>
-    </tr>
+    <Book book={{}} />
   </table>
 );
 
-export default BookList;
+const mapStateToProps = state => {
+  return {
+      books: state.books;
+  }
+}
+
+export defaultconnect(mapStateToProps)(BookList);
