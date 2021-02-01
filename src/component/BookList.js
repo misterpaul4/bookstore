@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Book from './Book';
-'
 
 const BookList = () => (
   <table>
@@ -9,10 +8,8 @@ const BookList = () => (
   </table>
 );
 
-const mapStateToProps = state => {
-  return {
-      books: state.books;
-  }
-}
+const mapStateToProps = state => ({
+  books: state.books,
+});
 
-export defaultconnect(mapStateToProps)(BookList);
+export default connect(mapStateToProps)(BookList);
