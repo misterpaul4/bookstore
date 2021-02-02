@@ -23,9 +23,6 @@ const initialState = {
 
 const store = createStore(rootReducer, { books: initialState });
 
-// eslint-disable-next-line no-console
-console.log(store.getState());
-
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>

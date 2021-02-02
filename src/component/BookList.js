@@ -1,19 +1,11 @@
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable react/prop-types */
 import React from 'react';
-// import propTypes from 'prop-types';
+import propTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Book from './Book';
 
-const BookList = props => {
-  const { books } = props.books;
-  // eslint-disable-next-line no-console
-  console.log('BookList', props.books);
-  const callBook = book => {
-    console.log('sending book', book);
-    return (<Book book={book} />);
-  };
-  console.log('map', books.map(callBook));
+const BookList = ({ books: { books } }) => {
+  const callBook = book => (<Book book={book} />);
+
   return (
     <table>
       <tbody>
@@ -27,10 +19,12 @@ const mapStateToProps = state => ({
   books: state.books,
 });
 
-// BookList.propTypes = {
-//  books: propTypes.arrayOf(propTypes.shape({
-//    id: propTypes.number.isRequired,
-//  }))
-// };
+BookList.propTypes = {
+  books: propTypes.shape(propTypes.shape({
+    id: propTypes.number,
+    title: propTypes.string,
+    category: propTypes.string,
+  }).isRequired).isRequired,
+};
 
 export default connect(mapStateToProps)(BookList);
