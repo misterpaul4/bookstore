@@ -1,17 +1,32 @@
+/* eslint-disable react/destructuring-assignment */
+/* eslint-disable react/prop-types */
 import React from 'react';
+// import propTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Book from './Book';
 
-const BookList = () => (
-  <table>
-    <tbody>
-      <Book book={{}} />
-    </tbody>
-  </table>
-);
+const BookList = props => {
+  const { books } = props.books;
+  // eslint-disable-next-line no-console
+  console.log('BookList', props.books);
+
+  return (
+    <table>
+      <tbody>
+        <Book book={books} />
+      </tbody>
+    </table>
+  );
+};
 
 const mapStateToProps = state => ({
   books: state.books,
 });
+
+// BookList.propTypes = {
+//  books: propTypes.arrayOf(propTypes.shape({
+//    id: propTypes.number.isRequired,
+//  }))
+// };
 
 export default connect(mapStateToProps)(BookList);
