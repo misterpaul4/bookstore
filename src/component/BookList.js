@@ -4,7 +4,9 @@ import Book from './Book';
 
 const BookList = () => (
   <table>
-    <Book book={{}} />
+    <tbody>
+      <Book book={{}} />
+    </tbody>
   </table>
 );
 

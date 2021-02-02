@@ -1,18 +1,30 @@
 const initialState = {
-  id: null,
-  author: '',
-  title: '',
-  category: '',
+  books: [
+    {
+      id: 1,
+      title: 'Lord of the rings',
+      category: 'Action',
+    },
+    {
+      id: 2,
+      title: 'Harry Potter',
+      category: 'Kids',
+    },
+  ],
 };
 
 const BookReducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'TEST': return {
+    case 'CREATE_BOOK': return {
       ...state,
-      id: '',
-    };
 
-    default: return state;
+    };
+    case 'REMOVE_BOOK': return {
+      ...state,
+
+    };
+    default:
+      return state;
   }
 };
 
