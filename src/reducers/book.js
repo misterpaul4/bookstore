@@ -6,7 +6,7 @@ const BookReducer = (state = [], action) => {
     };
     case 'REMOVE_BOOK': return {
       ...state,
-
+      arr: [...state, action.payload],
     };
     default:
       return state;
