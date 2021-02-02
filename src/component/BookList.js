@@ -8,6 +8,13 @@ const BookList = ({ books: { books } }) => {
 
   return (
     <table>
+      <thead>
+        <tr>
+          <td>ID</td>
+          <td>TITLE</td>
+          <td>CATEGORY</td>
+        </tr>
+      </thead>
       <tbody>
         {books.map(callBook)}
       </tbody>
