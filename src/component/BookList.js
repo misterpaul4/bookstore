@@ -9,11 +9,15 @@ const BookList = props => {
   const { books } = props.books;
   // eslint-disable-next-line no-console
   console.log('BookList', props.books);
-
+  const callBook = book => {
+    console.log('sending book', book);
+    return (<Book book={book} />);
+  };
+  console.log('map', books.map(callBook));
   return (
     <table>
       <tbody>
-        <Book book={books} />
+        {books.map(callBook)}
       </tbody>
     </table>
   );

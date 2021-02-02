@@ -7,7 +7,7 @@ import './css/index.css';
 import App from './component/App';
 
 const initialState = {
-  book: [
+  books: [
     {
       id: Math.random(),
       title: 'Lord of the rings',
@@ -21,7 +21,7 @@ const initialState = {
   ],
 };
 
-const store = createStore(rootReducer, { book: initialState });
+const store = createStore(rootReducer, { books: initialState });
 
 // eslint-disable-next-line no-console
 console.log(store.getState());
