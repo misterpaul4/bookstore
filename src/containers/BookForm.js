@@ -1,8 +1,3 @@
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable react/prop-types */
-/* eslint-disable react/no-unused-prop-types */
-/* eslint-disable no-console */
-/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import propTypes from 'prop-types';
 import { connect } from 'react-redux';
@@ -37,12 +32,16 @@ function BookForm(props) {
 
   const handleSubmit = e => {
     e.preventDefault();
-    console.log('save btn clicked', book.title, book.category);
 
     props.createBook({
       id: Math.floor(Math.random() * 100),
       title: book.title,
       category: book.category,
+    });
+
+    setBook({
+      title: '',
+      category: 'Biography',
     });
   };
 
@@ -50,7 +49,7 @@ function BookForm(props) {
   const MakeCategory = cat => <option>{cat}</option>;
   return (
     <form>
-      <input type="text" id="title" onChange={e => { handleChange(e); }} />
+      <input value={book.title} type="text" id="title" onChange={e => { handleChange(e); }} />
       <select value={book.category} id="category" onChange={e => { handleChange(e); }}>
         {categories.map(MakeCategory)}
       </select>
