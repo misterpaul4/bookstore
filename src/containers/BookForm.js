@@ -40,7 +40,7 @@ function BookForm(props) {
     console.log('save btn clicked', book.title, book.category);
 
     props.createBook({
-      id: Math.random,
+      id: Math.floor(Math.random() * 100),
       title: book.title,
       category: book.category,
     });
