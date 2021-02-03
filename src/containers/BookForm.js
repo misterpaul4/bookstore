@@ -1,19 +1,22 @@
+/* eslint-disable react/destructuring-assignment */
+/* eslint-disable react/prop-types */
+/* eslint-disable react/no-unused-prop-types */
+/* eslint-disable no-console */
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
+import propTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { createBook } from '../actions';
 
 function BookForm(props) {
   const [book, setBook] = useState({
     title: '',
-    category: '',
+    category: 'Biography',
   });
 
   const handleChange = e => {
-    console.log('change was made');
     switch (e.target.id) {
       case 'title':
-        console.log('input', e.target.value);
         setBook({
           ...book,
           title: e.target.value,
@@ -34,7 +37,8 @@ function BookForm(props) {
 
   const handleSubmit = e => {
     e.preventDefault();
-    console.log('saving book', book);
+    console.log('save btn clicked', book.title, book.category);
+
     props.createBook({
       id: Math.random,
       title: book.title,
@@ -61,4 +65,12 @@ const mapDispatchToProps = dispatch => ({
   },
 });
 
-export default BookForm;
+const mapStateToProps = state => ({
+  books: state.books,
+});
+
+BookForm.propTypes = {
+  createBook: propTypes.func.isRequired,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(BookForm);
