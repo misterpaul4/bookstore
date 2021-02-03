@@ -54,6 +54,7 @@ function BookForm(props) {
         {categories.map(MakeCategory)}
       </select>
       <button type="submit" onClick={handleSubmit}>Save</button>
+
     </form>
   );
 }
