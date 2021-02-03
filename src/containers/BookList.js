@@ -1,10 +1,14 @@
 import React from 'react';
 import propTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { removeBook } from '../actions';
 import Book from '../component/Book';
 
 const BookList = ({ books: { books } }) => {
-  const callBook = book => (<Book book={book} />);
+  const handleRemoveBook = book => {
+    props.removeBook(book);
+  };
+  const callBook = book => (<Book book={book} handler={handleRemoveBook} />);
 
   return (
     <table>
@@ -26,12 +30,19 @@ const mapStateToProps = state => ({
   books: state.books,
 });
 
+const mapDispatchToProps = dispatch => ({
+  removeBook: book => {
+    dispatch(removeBook(book));
+  },
+});
+
 BookList.propTypes = {
   books: propTypes.shape(propTypes.shape({
     id: propTypes.number,
     title: propTypes.string,
     category: propTypes.string,
   }).isRequired).isRequired,
+  removeBook: propTypes.func.isRequired,
 };
 
-export default connect(mapStateToProps)(BookList);
+export default connect(mapStateToProps, mapDispatchToProps)(BookList);
