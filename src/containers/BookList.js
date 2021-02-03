@@ -4,10 +4,11 @@ import { connect } from 'react-redux';
 import { removeBook } from '../actions';
 import Book from '../component/Book';
 
-const BookList = ({ books: { books } }) => {
+const BookList = ({ books: { books }, removeBook }) => {
   const handleRemoveBook = book => {
-    props.removeBook(book);
+    removeBook(book);
   };
+
   const callBook = book => (<Book book={book} handler={handleRemoveBook} />);
 
   return (
