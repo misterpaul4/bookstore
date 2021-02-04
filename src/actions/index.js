@@ -1,3 +1,3 @@
-import { createBook, removeBook } from './booksActions';
+import { createBook, removeBook, changeFilter } from './booksActions';
 
-export { createBook, removeBook };
+export { createBook, removeBook, changeFilter };

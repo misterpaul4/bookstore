@@ -19,6 +19,7 @@ const initialState = {
       category: 'Kids',
     },
   ],
+  filter: 'All',
 };
 
 const store = createStore(rootReducer, { books: initialState });
