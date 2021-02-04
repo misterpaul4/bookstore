@@ -1,6 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/prop-types */
-/* eslint-disable no-console */
 import React from 'react';
 import propTypes from 'prop-types';
 import { connect } from 'react-redux';
@@ -67,7 +64,9 @@ BookList.propTypes = {
     title: propTypes.string,
     category: propTypes.string,
   }).isRequired).isRequired,
+  filter: propTypes.string.isRequired,
   removeBook: propTypes.func.isRequired,
+  changeCategoryFilter: propTypes.func.isRequired,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(BookList);

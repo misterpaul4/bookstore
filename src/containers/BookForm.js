@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import propTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { createBook } from '../actions';
+import categories from '../resources/categories';
 
 function BookForm(props) {
   const [book, setBook] = useState({
@@ -45,17 +46,18 @@ function BookForm(props) {
     });
   };
 
-  const categories = ['Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
   const MakeCategory = cat => <option>{cat}</option>;
   return (
-    <form>
-      <input value={book.title} type="text" id="title" onChange={e => { handleChange(e); }} />
-      <select value={book.category} id="category" onChange={e => { handleChange(e); }}>
-        {categories.map(MakeCategory)}
-      </select>
-      <button type="submit" onClick={handleSubmit}>Save</button>
-
-    </form>
+    <div>
+      <h1>Add New Book</h1>
+      <form>
+        <input value={book.title} type="text" id="title" onChange={e => { handleChange(e); }} />
+        <select value={book.category} id="category" onChange={e => { handleChange(e); }}>
+          {categories.map(MakeCategory)}
+        </select>
+        <button type="submit" onClick={handleSubmit}>Save</button>
+      </form>
+    </div>
   );
 }
 

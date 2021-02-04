@@ -1,3 +1,3 @@
-const categories = ['All', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
+const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'].sort();
 
 export default categories;
