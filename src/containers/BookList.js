@@ -1,26 +1,33 @@
-import React, { useState } from 'react';
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
+/* eslint-disable no-console */
+import React from 'react';
 import propTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { removeBook } from '../actions';
+import { removeBook, changeFilter } from '../actions';
 import Book from '../component/Book';
 import CategoryFilter from '../component/CategoryFilter';
 
-const BookList = ({ books: { books }, removeBook }) => {
-  const { bookList, setBookList } = useState({
-    bookList: books,
-  });
-
+const BookList = ({
+  books: { books }, filter: { filter }, removeBook, changeCategoryFilter,
+}) => {
   const handleRemoveBook = book => {
     removeBook(book);
   };
 
   const callBook = book => (<Book book={book} handler={handleRemoveBook} />);
   const changeFilter = key => {
-    console.log('change the filter', key);
-    setBookList({
-      bookList: books,
-    })
+    changeCategoryFilter(key);
   };
+
+  const filteredBooks = () => {
+    if (filter !== 'All') {
+      return books.filter(book => book.category === filter);
+    }
+
+    return books;
+  };
+
   return (
     <div>
       <CategoryFilter updateFilter={changeFilter} />
@@ -33,7 +40,7 @@ const BookList = ({ books: { books }, removeBook }) => {
           </tr>
         </thead>
         <tbody>
-          {bookList.map(callBook)}
+          {filteredBooks().map(callBook)}
         </tbody>
       </table>
     </div>
@@ -42,11 +49,15 @@ const BookList = ({ books: { books }, removeBook }) => {
 
 const mapStateToProps = state => ({
   books: state.books,
+  filter: state.filter,
 });
 
 const mapDispatchToProps = dispatch => ({
   removeBook: book => {
     dispatch(removeBook(book));
+  },
+  changeCategoryFilter: category => {
+    dispatch(changeFilter(category));
   },
 });
 

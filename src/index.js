@@ -19,10 +19,13 @@ const initialState = {
       category: 'Kids',
     },
   ],
+};
+
+const filterInitialState = {
   filter: 'All',
 };
 
-const store = createStore(rootReducer, { books: initialState });
+const store = createStore(rootReducer, { books: initialState, filter: filterInitialState });
 
 ReactDOM.render(
   <React.StrictMode>
