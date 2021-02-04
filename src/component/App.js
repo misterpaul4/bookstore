@@ -1,11 +1,12 @@
 import React from 'react';
-import '../css/App.css';
 import BookForm from '../containers/BookForm';
 import BookList from '../containers/BookList';
+import Header from './Header';
 
 function App() {
   return (
-    <div className="App">
+    <div className="Bookstore-CMS-App">
+      <Header />
       <BookList />
       <BookForm />
     </div>
