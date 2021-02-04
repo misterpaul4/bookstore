@@ -9,12 +9,12 @@ import App from './component/App';
 const initialState = {
   books: [
     {
-      id: Math.random(),
+      id: Math.floor(Math.random() * 100),
       title: 'Lord of the rings',
       category: 'Action',
     },
     {
-      id: Math.random(),
+      id: Math.floor(Math.random() * 100),
       title: 'Harry Potter',
       category: 'Kids',
     },
