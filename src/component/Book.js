@@ -18,11 +18,11 @@ const Book = ({ book, handler }) => {
       </div>
       <div className="book-percent">
         <div className="book-chart">
-          {/* <span>chart</span> */}
           <img src={chart} alt="chart" className="chart" />
         </div>
         <div className="book-percent-legend">
-          <h3>0 %</h3>
+          <h3 className="percentage">60%</h3>
+          <span>completed</span>
         </div>
       </div>
       <div className="Book-current-ch">

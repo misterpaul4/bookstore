@@ -48,7 +48,7 @@ function BookForm(props) {
 
   const MakeCategory = cat => <option>{cat}</option>;
   return (
-    <div>
+    <div className="book-footer">
       <h1 className="newbook-heading">ADD NEW BOOK</h1>
       <form className="new-book">
         <input className="new-title" value={book.title} type="text" id="title" onChange={e => { handleChange(e); }} />
