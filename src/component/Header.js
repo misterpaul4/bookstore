@@ -2,12 +2,10 @@ import React from 'react';
 
 const Header = () => (
   <header className="panel-bg">
-    <span className="Bookstore-CMS">Bookstore CMS</span>
-    <span className="BOOKS">BOOKS</span>
-    <span className="CATEGORIES">CATEGORIES</span>
-    <div className="Oval">
-      <span className="Mask" />
-    </div>
+    <div className="Bookstore-CMS">Bookstore CMS</div>
+    <div className="BOOKS">BOOKS</div>
+    <div className="CATEGORIES">CATEGORIES</div>
+    <div className="Mask"><i className="fas fa-user" /></div>
   </header>
 );
 

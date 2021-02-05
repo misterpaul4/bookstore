@@ -29,13 +29,6 @@ const BookList = ({
     <div>
       <CategoryFilter updateFilter={changeFilter} />
       <table>
-        <thead>
-          <tr>
-            <td>ID</td>
-            <td>TITLE</td>
-            <td>CATEGORY</td>
-          </tr>
-        </thead>
         <tbody>
           {filteredBooks().map(callBook)}
         </tbody>

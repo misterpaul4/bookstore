@@ -7,8 +7,10 @@ function App() {
   return (
     <div className="Bookstore-CMS-App">
       <Header />
-      <BookList />
-      <BookForm />
+      <div className="panel-books">
+        <BookList />
+        <BookForm />
+      </div>
     </div>
   );
 }
