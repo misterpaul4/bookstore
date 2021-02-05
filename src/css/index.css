@@ -27,6 +27,11 @@ body {
   margin-left: 7%;
 }
 
+.chart {
+  height: 68px;
+  width: 68px;
+}
+
 .cat-filter {
   width: 285px;
   margin:0;

@@ -1,5 +1,6 @@
 import React from 'react';
 import propTypes from 'prop-types';
+import chart from '../assets/circle.png';
 
 const Book = ({ book, handler }) => {
   const { id, title, category } = book;
@@ -17,7 +18,8 @@ const Book = ({ book, handler }) => {
       </div>
       <div className="book-percent">
         <div className="book-chart">
-          <span>chart</span>
+          {/* <span>chart</span> */}
+          <img src={chart} alt="chart" className="chart" />
         </div>
         <div className="book-percent-legend">
           <h3>0 %</h3>
