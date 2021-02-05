@@ -21,7 +21,11 @@ const initialState = {
   ],
 };
 
-const store = createStore(rootReducer, { books: initialState });
+const filterInitialState = {
+  filter: 'All',
+};
+
+const store = createStore(rootReducer, { books: initialState, filter: filterInitialState });
 
 ReactDOM.render(
   <React.StrictMode>
