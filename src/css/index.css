@@ -1,4 +1,313 @@
+:root {
+  --lightGray: #fafafa;
+}
+
 body {
-  box-sizing: border-box;
-  font-size: 10px;
+  font-family: Montserrat, Times, serif;
+  font-size: 14px;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+}
+
+.Bookstore-CMS-App {
+  padding: 0;
+  background-color: white;
+}
+
+.header-mnu {
+  display: flex;
+  align-items: center;
+}
+
+.book-info {
+  display: flex;
+}
+
+.panel-bg {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  padding: 23px 99px 27px 100px;
+  background-color: #fff;
+}
+
+.panel-books {
+  width: 80%;
+  margin-left: 7%;
+  padding-top: 2em;
+}
+
+.chart {
+  height: 68px;
+  width: 68px;
+}
+
+.cat-filter {
+  width: 285px;
+  margin-bottom: 1em;
+  padding: 6px 15px 9px 16px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+}
+
+.book-row {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 15px;
+  padding: 32px 147px 26px 27px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+}
+
+.book-card {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+}
+
+.book-title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  color: #121212;
+  font-family: RobotoSlab, 'Times New Roman', Times, serif;
+}
+
+.book-cat {
+  opacity: 0.5;
+  font-family: Montserrat, 'Times New Roman', Times, serif;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.book-Author {
+  font-family: RobotoSlab, 'Times New Roman', Times, serif;
+  font-size: 14px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+}
+
+.book-mnu-item {
+  font-family: RobotoSlab, 'Times New Roman', Times, serif;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+  background: transparent;
+  border-style: none;
+  padding: 0;
+  margin-right: 7px;
+  margin-top: 13px;
+  font-size: 14px;
+}
+
+.book-mnu-item:nth-child(even) {
+  border-right: 1px solid #e8e8e8;
+  border-left: 1px solid #e8e8e8;
+  padding: 0 1em;
+}
+
+.percentage {
+  margin-bottom: 2px;
+}
+
+.book-percent {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  border-right: 1px solid #e8e8e8;
+  margin-right: 2em;
+}
+
+.book-percent-legend {
+  margin-left: 1.5em;
+}
+
+.Book-current-ch {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+.current-head {
+  opacity: 0.5;
+  font-size: 13px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+  font-family: RobotoSlab, 'Times New Roman', Times, serif;
+}
+
+.current-ch-name {
+  font-family: RobotoSlab, 'Times New Roman', Times, serif;
+  font-size: 16px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  color: #121212;
+  margin-top: 0;
+}
+
+.current-ch-update {
+  border-radius: 3px;
+  background-color: #0290ff;
+  font-size: 0.6rem;
+  font-family: RobotoSlab, 'Times New Roman', Times, serif;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #fff;
+}
+
+.Bookstore-CMS {
+  font-family: Montserrat, 'Times New Roman', Times, serif;
+  font-size: 30px;
+  font-weight: bold;
+  color: #0290ff;
+}
+
+.book-footer {
+  border-top: 1px solid #e8e8e8;
+  margin-bottom: 10em;
+}
+
+.BOOKS {
+  margin: 0 3em;
+  font-family: Montserrat, 'Times New Roman', Times, serif;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: #121212;
+}
+
+.CATEGORIES {
+  opacity: 0.5;
+  font-family: Montserrat, 'Times New Roman', Times, serif;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: #121212;
+}
+
+.Oval {
+  width: 45px;
+  height: 45px;
+  margin: 0 0 0 664px;
+  padding: 14px;
+  border: solid 1px #e8e8e8;
+}
+
+.Mask {
+  width: 17px;
+  height: 17px;
+  font-size: larger;
+  color: #0290ff;
+}
+
+.newbook-heading {
+  margin: 29px 524px 19px 0;
+  font-family: Montserrat, 'Times New Roman', Times, serif;
+  font-size: 20px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: #888;
+  height: 24px;
+}
+
+.new-book {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin: 37px 0 0;
+  padding: 0;
+  border-radius: 4px;
+  border: none;
+  background-color: #fff;
+  font-family: Montserrat, 'Times New Roman', Times, serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.15px;
+  color: var(--pinkish-grey);
+}
+
+.new-title {
+  width: 70%;
+  height: 17px;
+  margin: 19px 34px 0 0;
+  padding: 13px 0 13px 17px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+}
+
+.new-category {
+  width: 285px;
+  height: 45px;
+  margin: 19px 8px 0 0;
+  padding: 6px 15px 9px 16px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+}
+
+.new-submit {
+  width: 20%;
+  height: 45px;
+  margin-top: 19px;
+  padding: 0;
+  border-radius: 3px;
+  background-color: #0290ff;
+  font-size: 13px;
+  font-family: RobotoSlab, 'Times New Roman', Times, serif;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #fff;
+  margin-right: -50px;
+  border: 0;
 }

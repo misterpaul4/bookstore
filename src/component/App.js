@@ -1,13 +1,16 @@
 import React from 'react';
-import '../css/App.css';
 import BookForm from '../containers/BookForm';
 import BookList from '../containers/BookList';
+import Header from './Header';
 
 function App() {
   return (
-    <div className="App">
-      <BookList />
-      <BookForm />
+    <div className="Bookstore-CMS-App">
+      <Header />
+      <div className="panel-books">
+        <BookList />
+        <BookForm />
+      </div>
     </div>
   );
 }

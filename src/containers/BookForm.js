@@ -48,14 +48,14 @@ function BookForm(props) {
 
   const MakeCategory = cat => <option>{cat}</option>;
   return (
-    <div>
-      <h1>Add New Book</h1>
-      <form>
-        <input value={book.title} type="text" id="title" onChange={e => { handleChange(e); }} />
-        <select value={book.category} id="category" onChange={e => { handleChange(e); }}>
+    <div className="book-footer">
+      <h1 className="newbook-heading">ADD NEW BOOK</h1>
+      <form className="new-book">
+        <input className="new-title" value={book.title} type="text" id="title" onChange={e => { handleChange(e); }} />
+        <select className="new-category" value={book.category} id="category" onChange={e => { handleChange(e); }}>
           {categories.map(MakeCategory)}
         </select>
-        <button type="submit" onClick={handleSubmit}>Save</button>
+        <button className="new-submit" type="submit" onClick={handleSubmit}>ADD BOOK</button>
       </form>
     </div>
   );

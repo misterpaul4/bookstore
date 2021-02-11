@@ -12,9 +12,8 @@ function CategoryFilter(props) {
 
   return (
     <div>
-      <h1>Filter</h1>
       <form>
-        <select id="categoryFilter" onChange={e => { handleChange(e); }}>
+        <select className="cat-filter" id="categoryFilter" onChange={e => { handleChange(e); }}>
           {allCategories.map(MakeCategory)}
         </select>
       </form>
